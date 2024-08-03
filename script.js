@@ -5,7 +5,6 @@ form.addEventListener('submit', handleSubmit);
 
 
 
-
 function handleSubmit(event){
     
 event.preventDefault();
@@ -16,9 +15,13 @@ if (file[0].type !== "application/pdf")
     {
     console.log('Not a pdf file');
     return;
-} else {
-
-console.log("Name of the file is: " + file[0].name );
-
+    } 
+    localStorage.setItem("docName", file[0].name);
+    //window.location.href = "./pageTwo.html";
+    //console.log("Name of the file is: " + file[0].name );
 }
-}
+ 
+    
+
+
+   
