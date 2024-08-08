@@ -1,6 +1,5 @@
 
 const form = document.getElementById('uploadedForm');
-
 form.addEventListener('submit', handleSubmit);
 
 
@@ -16,10 +15,11 @@ if (file[0].type !== "application/pdf")
     console.log('Not a pdf file');
     return;
     } 
-    localStorage.setItem("docName", file[0].name);
-    //window.location.href = "./pageTwo.html";
+    sessionStorage.setItem("docName", file[0].name);
     //console.log("Name of the file is: " + file[0].name );
-}
+    //console.log(file[0]);
+    console.log(fileInput);
+    }
  
     
 
