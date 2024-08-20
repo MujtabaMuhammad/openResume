@@ -10,16 +10,18 @@
 <body>
     <h1>File Information</h1>
     <p id="fileName">File name will be displayed here</p>
+    <div id = 'pdfContent'></div>
+
     
     <script>
-        const fileName = sessionStorage.getItem("docName");
-        const fileNameElement = document.getElementById('fileName');
+        const fileData = sessionStorage.getItem("content");
+        const fileContentElement = document.getElementById('pdfContent');
 
-        if (fileName) 
-        { fileNameElement.textContent = `Uploaded file name: ${fileName}`;
+        if (fileData) 
+        { fileContentElement.textContent = `Uploaded file's Content: ${JSON.parse(fileData)}`;
         }
         else 
-        {fileNameElement.textContent = 'No file uploaded';
+        {fileContentElement.textContent = 'No file uploaded';
         }
         
 

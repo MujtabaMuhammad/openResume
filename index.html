@@ -52,7 +52,7 @@ h1 {
       <div class="col-5">
 
 	<label for="myFile">Please upload resume over here (as a .pdf file only)</label>
-  <form id = "uploadedForm" action="/action.php" method = "post" enctype = "multipart/form-data">
+  <form id = "uploadedForm" method = "post" enctype = "multipart/form-data">
   <input type="file" id="myFile" name="filename" autocomplete="off" accept = "application/pdf">
 	</form>     
 	    </div>
@@ -63,7 +63,7 @@ h1 {
         Upload 
         </button>
 
-        <button type="submit" class = "btn btn-secondary" onclick="window.location.href='pageTwo.html'"> 
+        <button type="button" class = "btn btn-secondary" onclick="window.location.href='pageTwo.html'"> 
          Next 
         </button>
     
@@ -75,9 +75,15 @@ h1 {
   
  
   
-   
-  <script src="script.js"></script>
-  
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js"></script>
+
+
+<script>
+   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js';
+</script>
+<script src="script.js"></script>
+
 </body>
 
 
